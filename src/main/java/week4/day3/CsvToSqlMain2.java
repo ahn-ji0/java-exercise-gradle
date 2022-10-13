@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CsvToSqlMain2 {
     public static void main(String[] args) throws IOException {
-        String fileName = "/Users/ahnjy/Downloads/서울시 병의원 위치 정보2.csv";
+        String fileName = "/Users/ahnjy/Downloads/서울시 병의원 위치 정보.csv";
         List<SeoulHospital2> myList = new ArrayList<>();
 
         Read2<SeoulHospital2> read2 = new Read2<>(new Parse2SeoulHospital2(),true);

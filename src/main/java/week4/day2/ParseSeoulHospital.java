@@ -4,7 +4,7 @@ public class ParseSeoulHospital implements Parse<SeoulHospital> {
 
     public String lookUp(String str){
 
-        String[] lookUpTable = {"피부과", "성형외과", "외과", "내과", "소아과", "가정의학과", "치과"};
+        String[] lookUpTable = {"내과", "외과", "소아", "피부", "성형", "정형외과", "척추", "교정", "산부인과", "관절", "봉합", "화상", "골절", "영유아", "안과", "가정의학과", "비뇨기과", "치과"};
         String type = null;
         for(String subdiv : lookUpTable){
             if(str.contains(subdiv)){
