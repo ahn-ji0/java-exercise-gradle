@@ -1,6 +1,6 @@
 package algorithm;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class SelectionSort {
     public int[] sort(int[] arr){
@@ -15,12 +15,12 @@ public class SelectionSort {
                 } else break;
             }
             arr[j+1] = tmp;
-            }
+        }
         return arr;
     }
 
     public static void main(String[] args) {
-        int[] arr = {8,5,6,2,4};
+        int[] arr = {5,8,1,4,3};
         SelectionSort selectionSort = new SelectionSort();
         arr = selectionSort.sort(arr);
         System.out.println(Arrays.toString(arr));
