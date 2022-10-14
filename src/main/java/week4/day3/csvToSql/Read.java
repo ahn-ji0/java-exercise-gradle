@@ -6,16 +6,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Read2<T> {
-    private Parse2<T> parse2;
+public class Read<T> {
+    private Parse<T> parse;
     boolean removeColumnName = false;
 
-    public Read2(Parse2<T> parse2){
-        this.parse2 = parse2;
+    public Read(Parse<T> parse){
+        this.parse = parse;
     }
 
-    public Read2(Parse2<T> parse2, boolean removeColumnName){
-        this.parse2 = parse2;
+    public Read(Parse<T> parse, boolean removeColumnName){
+        this.parse = parse;
         this.removeColumnName = removeColumnName;
     }
     public List<T> readLines(String fileName) throws IOException {
@@ -27,7 +27,7 @@ public class Read2<T> {
             br.readLine();
         }
         while ((line = br.readLine()) != null) {
-            T tmp = parse2.parsing(line);
+            T tmp = parse.parsing(line);
             myList.add(tmp);
         }
 

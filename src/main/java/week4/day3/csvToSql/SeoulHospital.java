@@ -1,6 +1,6 @@
 package week4.day3.csvToSql;
 
-public class SeoulHospital2 {
+public class SeoulHospital {
     private String id;
     private String address;
     private String district;
@@ -8,8 +8,9 @@ public class SeoulHospital2 {
     private int er;
     private String name;
     private String subdivision;
+    private boolean last;
 
-    public SeoulHospital2(String id, String address, String district, String type, int er, String name, String subdivision){
+    public SeoulHospital(String id, String address, String district, String type, int er, String name, String subdivision){
         this.id = id;
         this.address = address;
         this.district = district;
@@ -17,6 +18,11 @@ public class SeoulHospital2 {
         this.er = er;
         this.name = name;
         this.subdivision = subdivision;
+    }
+
+    public String getSqlQuery(){
+        return String.format("('%s','%s','%s','%s',%d,'%s','%s')",this.id, this.address,
+                this.district,this.type,this.er,this.name,this.subdivision);
     }
 
     public String getId() {
