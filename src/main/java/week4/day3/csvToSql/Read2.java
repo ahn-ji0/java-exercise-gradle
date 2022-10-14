@@ -1,4 +1,4 @@
-package week4.day3;
+package week4.day3.csvToSql;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

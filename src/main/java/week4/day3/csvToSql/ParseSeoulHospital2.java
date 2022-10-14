@@ -1,11 +1,11 @@
-package week4.day3;
+package week4.day3.csvToSql;
 
-public class Parse2SeoulHospital2 implements Parse2<SeoulHospital2> {
+public class ParseSeoulHospital2 implements Parse2<SeoulHospital2> {
 
     public String lookUp(String str){
 
         String[] lookUpTable = {"피부과", "성형외과", "외과", "내과", "소아과", "가정의학과", "치과"};
-        String type = null;
+        String type = "";
         for(String subdiv : lookUpTable){
             if(str.contains(subdiv)){
                 type = subdiv;

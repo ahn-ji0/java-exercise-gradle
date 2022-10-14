@@ -1,4 +1,4 @@
-package week4.day3;
+package week4.day3.csvToSql;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -32,5 +32,4 @@ public class WriteSeoulHospital2 {
         bw.close();
     }
 }
-
 

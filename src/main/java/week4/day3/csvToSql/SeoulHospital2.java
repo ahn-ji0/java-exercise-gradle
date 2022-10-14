@@ -1,4 +1,4 @@
-package week4.day3;
+package week4.day3.csvToSql;
 
 public class SeoulHospital2 {
     private String id;
