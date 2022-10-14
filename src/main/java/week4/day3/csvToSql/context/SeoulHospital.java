@@ -1,4 +1,4 @@
-package week4.day3.csvToSql;
+package week4.day3.csvToSql.context;
 
 public class SeoulHospital {
     private String id;
@@ -21,7 +21,7 @@ public class SeoulHospital {
     }
 
     public String getSqlQuery(){
-        return String.format("('%s','%s','%s','%s',%d,'%s','%s')",this.id, this.address,
+        return String.format("(\"%s\",\"%s\",\"%s\",\"%s\",%d,\"%s\",\"%s\")",this.id, this.address,
                 this.district,this.type,this.er,this.name,this.subdivision);
     }
 

@@ -1,4 +1,4 @@
-package week4.day3.csvToSql;
+package week4.day3.csvToSql.parser;
 
 public interface Parse<T> {
     T parsing(String str);

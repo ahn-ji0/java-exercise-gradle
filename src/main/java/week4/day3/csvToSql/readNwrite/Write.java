@@ -1,4 +1,6 @@
-package week4.day3.csvToSql;
+package week4.day3.csvToSql.readNwrite;
+
+import week4.day3.csvToSql.parser.Parse;
 
 import java.io.BufferedWriter;
 import java.io.File;

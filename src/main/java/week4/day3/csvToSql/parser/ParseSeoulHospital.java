@@ -1,4 +1,6 @@
-package week4.day3.csvToSql;
+package week4.day3.csvToSql.parser;
+
+import week4.day3.csvToSql.context.SeoulHospital;
 
 public class ParseSeoulHospital implements Parse<SeoulHospital> {
 
@@ -34,7 +36,7 @@ public class ParseSeoulHospital implements Parse<SeoulHospital> {
     @Override
     public String revparse(SeoulHospital object, boolean last) {
         if(!last) {
-            return object.getSqlQuery() + ",";
+            return object.getSqlQuery() + ",\n";
         }
 
         return object.getSqlQuery() + ";";
