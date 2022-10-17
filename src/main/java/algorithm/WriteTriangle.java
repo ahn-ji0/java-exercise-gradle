@@ -1,7 +1,7 @@
 package algorithm;
 
 import java.util.*;
-
+//별찍기 직각삼각형
 public class WriteTriangle {
     public void printTriangle(int n){
         for(int i=1; i<=n; i++){
