@@ -2,6 +2,7 @@ package algorithm;
 
 import java.util.Scanner;
 
+//입력하는 letter 찍기(직각삼각형)
 public class WriteLetter {
     private char letter;
 
