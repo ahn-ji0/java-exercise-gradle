@@ -1,5 +1,6 @@
 package algorithm;
 
+//별찍기 피라미드형
 public class WritePyramid {
     public void printPyramid(int n){
         for(int i = 1; i <= n; i++){
