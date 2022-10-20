@@ -1,14 +1,14 @@
 package algorithm;
 
-public class Stack02<T> {
+public class StackGeneric<T> {
     //제네릭 배열은 생성이 안됨 => 왜?
     private T[] arr = (T[]) new Object[10000];
     private int pointer = 0;
 
-    public Stack02() {
+    public StackGeneric() {
     }
 
-    public Stack02(int size) {
+    public StackGeneric(int size) {
         this.arr = (T[]) new Object[size];
     }
 
