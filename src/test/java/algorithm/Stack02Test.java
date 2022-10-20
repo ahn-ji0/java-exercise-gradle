@@ -37,4 +37,22 @@ class Stack02Test {
         assertEquals(10,st.pop());
     }
 
+    @Test
+    @DisplayName("peek")
+    void peek(){
+        Stack02 st = new Stack02(10);
+        st.push(10);
+        st.push(20);
+
+        assertEquals(20,st.peek());
+    }
+
+    @Test
+    @DisplayName("isEmpty")
+    void isEmpty(){
+        Stack02 st = new Stack02(10);
+
+        assertEquals(true,st.isEmpty());
+    }
+
 }
