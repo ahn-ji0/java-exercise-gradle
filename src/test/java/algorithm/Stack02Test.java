@@ -38,16 +38,24 @@ class Stack02Test {
 
         assertEquals(20, st.pop());
         assertEquals(10,st.pop());
+
+        assertThrows(EmptyStackException.class,()->{
+            st.pop();
+        });
     }
 
     @Test
     @DisplayName("peek")
     void peek(){
         Stack02 st = new Stack02(10);
-        st.push(10);
         st.push(20);
-
         assertEquals(20,st.peek());
+
+        st.pop();
+
+        assertThrows(EmptyStackException.class,()->{
+            st.peek();
+        });
     }
 
     @Test
@@ -55,7 +63,9 @@ class Stack02Test {
     void isEmpty(){
         Stack02 st = new Stack02(10);
 
-        assertEquals(true,st.isEmpty());
+        assertTrue(st.isEmpty());
+        st.push(10);
+        assertFalse(st.isEmpty());
     }
 
     @Test
@@ -66,12 +76,5 @@ class Stack02Test {
         });
     }
 
-    @Test
-    void pop2(){
-        Stack02 st = new Stack02();
-        assertThrows(EmptyStackException.class,()->{
-            st.pop();
-        });
-    }
 
 }
