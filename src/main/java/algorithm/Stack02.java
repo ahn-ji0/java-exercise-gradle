@@ -13,8 +13,7 @@ public class Stack02 {
     }
 
     public void push(int value) {
-        this.arr[top] = value;
-        top++;
+        this.arr[top++] = value;
     }
 
     public Integer[] getArr(){
