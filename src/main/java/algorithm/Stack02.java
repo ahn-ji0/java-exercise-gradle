@@ -1,6 +1,9 @@
 package algorithm;
 
+import java.util.EmptyStackException;
+
 public class Stack02 {
+
     private Integer[] arr;
     private int top = 0;
 
@@ -21,6 +24,9 @@ public class Stack02 {
     }
 
     public int pop() {
+        if(this.isEmpty()){
+            throw new EmptyStackException();
+        }
         return this.arr[--top];
     }
 
