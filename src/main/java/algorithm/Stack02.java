@@ -24,4 +24,11 @@ public class Stack02 {
         return this.arr[--top];
     }
 
+    public int peek(){
+        return this.arr[top-1];
+    }
+
+    public boolean isEmpty(){
+        return top == 0;
+    }
 }
