@@ -1,27 +1,10 @@
 package algorithm;
 
-class Stack{
-    private char[] arr = new char[100000];
-    int pointer = 0;
-
-    public void push(char str){
-        arr[pointer++] = str;
-    }
-    public char pop(){
-        return arr[pointer--];
-    }
-    public boolean isEmpty(){
-        return pointer == 0;
-    }
-    public char peek(){
-        return arr[pointer-1];
-    }
-}
+import java.util.Stack;
 
 public class BracketStack {
     boolean solution(String s) {
-        boolean answer = true;
-        Stack stack = new Stack();
+        Stack<Character> stack = new Stack<>();
 
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)=='('){
@@ -34,9 +17,6 @@ public class BracketStack {
                 stack.pop();
             }
         }
-        if(!stack.isEmpty())
-            return false;
-
-        return true;
+        return stack.isEmpty();
     }
 }
