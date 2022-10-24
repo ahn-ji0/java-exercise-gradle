@@ -2,6 +2,7 @@ package algorithm;
 
 import java.util.Arrays;
 
+//run time error
 public class KthNumber {
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
@@ -9,8 +10,7 @@ public class KthNumber {
         for(int[] command:commands) {
             int[] temp = Arrays.copyOfRange(array, command[0] - 1, command[1]);
             Arrays.sort(temp);
-            int num = temp[command[2]-1];
-            answer[count++] = num;
+            answer[count++] = temp[command[2]-1];
         }
         return answer;
     }
